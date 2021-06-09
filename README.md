@@ -5,6 +5,10 @@ It is about learning to interface a Sensirion SCD4x carbon dioxide sensor to a R
 
 <img src="images/scd41.gif" width="360">
 
+## Threejs-VR-Physics Pages
+
+[https://physicslibrary.github.io/Threejs-VR-Carbon-Dioxide-Sensor/](https://physicslibrary.github.io/Threejs-VR-Carbon-Dioxide-Sensor/)
+
 ## System Requirements
 
 System Requirements
@@ -18,6 +22,8 @@ Oculus Browser >15.4 (Quest update 29.0 and threejs r129)<br>
 ## 1. Simulate measuring CO2 level with Sensirion SCD41<br>
 
 Open Oculus Browser to link ("Enter VR" using hand, no controller):<br>
+
+[https://physicslibrary.github.io/Threejs-VR-Carbon-Dioxide-Sensor/examples/threejs_vr_scd41sim.html](https://physicslibrary.github.io/Threejs-VR-Carbon-Dioxide-Sensor/examples/threejs_vr_scd41sim.html)
 
 ## 2. How to interface SCD41 to Raspberry Pi
 
