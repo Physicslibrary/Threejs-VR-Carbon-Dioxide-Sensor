@@ -1,5 +1,5 @@
 # Threejs-VR-Carbon-Dioxide-Sensor
-A project to explore measurements of carbon dioxide concentration and presenting the numbers in virtual reality.<br>
+A project to explore measurement of carbon dioxide concentration and presenting the numbers in virtual reality.<br>
 
 It is about learning to interface a Sensirion SCD4x carbon dioxide sensor to a Raspberry Pi and an Oculus Quest to 3D map CO2 measurements.<br>
 
@@ -7,7 +7,7 @@ It is about learning to interface a Sensirion SCD4x carbon dioxide sensor to a R
 
 System Requirements
 
-Oculus Quest (developed and tested on Quest 1)
+Oculus Quest (tested on Quest 1, no controllers)<br>
 
 Oculus Browser >15.4 (Quest update 29.0 and threejs r129)<br>
 
@@ -33,8 +33,10 @@ https://www.raspberrypi.org/software/operating-systems/
 
 ## Credits
 
-three.js r129
+three.js r129<br>
 
+scd41.glb<br>
+by Hartwell Fong (CC BY 4.0)<br>
 
 ## References
 
