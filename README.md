@@ -25,7 +25,7 @@ Open Oculus Browser to link ("Enter VR" using hand, no controller):<br>
 
 Code threejs_vr_scd41sim.html in ./examples simulates CO2 concentration as a function of distance from a point.<br>
 
-With a real SCD41 sensor, one can map CO2 concentration in a room. CO2 in a room are dependent on ventilation, number of persons present, and other factors. Perhaps there will be a passthrough mode in VR in a browser to merge the real and virtual views to visualize CO2 3D data. For now, "Passthrough Shortcut" (Guardian setting) by double tapping the headset or "Stationary Boundary: Passthrough" experimental feature. The AR glasses from Oculus would be a great application like this. Hope the AR browser will be just as fantastic as the one on the Quest.<br>
+With a real SCD41 sensor, one can map CO2 concentration in a room. CO2 in a room are dependent on ventilation, number of persons, time, diffusion, and other factors. Perhaps there will be a passthrough mode in VR in a browser to merge the real and virtual views to visualize CO2 3D data. For now, "Passthrough Shortcut" (Guardian setting) by double tapping the headset or "Stationary Boundary: Passthrough" experimental feature. The AR glasses from Oculus would be a great application for this. Hope the AR browser will be just as fantastic as the one on the Quest.<br>
 
 ## 2. Interfacing SCD41 to Raspberry Pi
 
