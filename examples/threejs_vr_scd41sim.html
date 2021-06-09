@@ -38,4 +38,159 @@ https://www.sensirion.com/en/environmental-sensors/evaluation-kit-sek-environmen
 
 https://github.com/Sensirion/raspberry-pi-i2c-scd4x
 
+https://threejs.org/
+
 -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js vr SCD41 CO2 Sensor</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<link type="text/css" rel="stylesheet" href="main.css">
+	</head>
+	<body>
+
+		<div id="info">
+			<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> vr SCD41 CO2 Sensor Simulation<br/>
+			(Oculus Browser 15.4+, put controllers down, use hand tracking to enter VR)
+		</div>
+
+		<script type="module">
+
+import * as THREE from '../build/three.module.js';
+import { VRButton } from './jsm/webxr/VRButton.js';
+import { OculusHandModel } from './jsm/webxr/OculusHandModel.js';
+import { createText } from './jsm/webxr/Text2D.js';
+import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
+
+let camera, scene, renderer;
+
+let count=0;
+let delay=0;
+
+var hand1, hand2;
+
+var co2;
+
+var co2_text, object, loader, mesh;
+
+init();
+animate();
+
+function init() {
+
+	scene = new THREE.Scene();
+	scene.background = new THREE.Color( 0x505050 );
+
+	camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 0.1, 10 );
+	camera.position.set( 0, 1.6, 3 );
+
+	// Add floor
+
+	var color = new THREE.Color(0x8ec683);
+	var floor = new THREE.GridHelper(8,8,color,color);
+	scene.add(floor);
+	
+	scene.add( new THREE.HemisphereLight( 0x606060, 0x404040 ) );
+
+	const light = new THREE.DirectionalLight( 0xffffff );
+	light.position.set( 1, 1, -4 ).normalize();
+	scene.add( light );
+
+	renderer = new THREE.WebGLRenderer( { antialias: true } );
+	renderer.setPixelRatio( window.devicePixelRatio );
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer.outputEncoding = THREE.sRGBEncoding;
+	renderer.xr.enabled = true;
+
+	document.body.appendChild( renderer.domElement );
+	document.body.appendChild( VRButton.createButton( renderer ) );
+	
+	// hand 1
+
+	hand1 = renderer.xr.getHand( 0 );
+	hand1.add( new OculusHandModel( hand1 ) );
+	scene.add( hand1 );
+
+	// hand 2
+
+	hand2 = renderer.xr.getHand( 1 );
+	hand2.add( new OculusHandModel( hand2 ) );
+	scene.add( hand2 );
+
+	var text = createText('Sensirion SCD41 CO2 Sensor Simulation', 0.05);
+	text.position.set( 0, 1.5, -1 );
+	scene.add( text );
+	text = createText('Pinch-release index-finger-thumb to stamp CO2', 0.05);
+	text.position.set( 0, 1.4, -1 );
+	scene.add( text );
+	text = createText('Look at palm, pinch-hold index-finger-thumb to exit', 0.05);
+	text.position.set( 0, 1.3, -1 );
+	scene.add( text );
+
+	co2_text = createText(count.toString(),0.05);
+	scene.add(co2_text);
+
+	object = new THREE.Object3D();
+	scene.add(object);
+
+	loader = new GLTFLoader();	
+	loader.load( "models/scd41.glb", function (gltf) {
+	mesh = gltf.scene;
+	mesh.scale.set(1,1,1);
+	mesh.position.set(0.045,-0.01,-0.05);
+	mesh.rotation.set(-Math.PI/2,Math.PI,2*Math.PI);
+	object.add(mesh);
+	});
+
+	hand1.addEventListener( 'pinchend', function ( evevent ) {
+		
+		scene.add(co2_text.clone());
+	
+	});
+
+}
+
+function animate() {
+
+		renderer.setAnimationLoop( render );
+
+		}
+
+function render() {
+
+		renderer.render( scene, camera );
+		
+		if(delay > 72){
+
+		co2 = 2000/Math.sqrt(Math.pow(object.position.x,2)+Math.pow((object.position.y+1),2)+Math.pow(object.position.z,2)+0.0001);
+		
+		scene.remove(co2_text);
+		co2_text = createText("CO2 "+Math.round(co2)+" ppm".toString(),0.05);
+		scene.add(co2_text);
+		delay=0;
+		
+		}
+
+		count += 1;
+		delay += 1;
+		
+		co2_text.position.x = hand1.joints['index-finger-tip'].position.x;
+		co2_text.position.y = hand1.joints['index-finger-tip'].position.y;
+		co2_text.position.z = hand1.joints['index-finger-tip'].position.z;						
+
+		object.position.x = hand1.joints['ring-finger-phalanx-proximal'].position.x;
+		object.position.y = hand1.joints['ring-finger-phalanx-proximal'].position.y;
+		object.position.z = hand1.joints['ring-finger-phalanx-proximal'].position.z;
+		object.quaternion.y = hand1.joints['ring-finger-phalanx-proximal'].quaternion.y;
+		object.quaternion.w = hand1.joints['ring-finger-phalanx-proximal'].quaternion.w;
+		object.quaternion.x = hand1.joints['ring-finger-phalanx-proximal'].quaternion.x;
+		object.quaternion.z = hand1.joints['ring-finger-phalanx-proximal'].quaternion.z;
+
+		}
+
+		</script>
+	</body>
+</html>
