@@ -17,7 +17,7 @@ Oculus Browser >15.4 (Quest update 29.0 and threejs r129)<br>
 
 ## 1. Simulate measuring CO2 level with Sensirion SCD41<br>
 
-No installation. In Oculus Quest, open Oculus Browser and go to link:<br>
+Open Oculus Browser to link ("Enter VR" using hand, no controller):<br>
 
 ## 2. How to interface SCD41 to Raspberry Pi
 
