@@ -1,4 +1,4 @@
-# Threejs-VR-Carbon-Dioxide-Sensor
+# Threejs-VR-Carbon-Dioxide-Sensor (under construction)
 A project to explore measurement of carbon dioxide concentration and presenting the numbers in virtual reality.<br>
 
 It is about learning to interface a Sensirion SCD4x carbon dioxide sensor to a Raspberry Pi and an Oculus Quest to 3D map CO2 measurements.<br>
@@ -11,9 +11,9 @@ It is about learning to interface a Sensirion SCD4x carbon dioxide sensor to a R
 
 ## System Requirements
 
-Oculus Quest (tested on Quest 1, no controllers)<br>
+Oculus Quest (tested Quest 1, no controllers)<br>
 
-Oculus Browser >15.4 (Quest update 29.0 and threejs r129)<br>
+Oculus Browser >15.4 (Quest update 29.0)<br>
 
 (Not sure if Oculus Browser needs to be configured for WebXR like in the early days. If the simulation below does not work, type "chrome://flags" in Oculus Browser and search for "webxr". "WebXR experiences with hand and joints tracking" and "WebXR Layers" are enabled)<br>
 
@@ -22,6 +22,10 @@ Oculus Browser >15.4 (Quest update 29.0 and threejs r129)<br>
 Open Oculus Browser to link ("Enter VR" using hand, no controller):<br>
 
 [https://physicslibrary.github.io/Threejs-VR-Carbon-Dioxide-Sensor/examples/threejs_vr_scd41sim.html](https://physicslibrary.github.io/Threejs-VR-Carbon-Dioxide-Sensor/examples/threejs_vr_scd41sim.html)
+
+Code threejs_vr_scd41sim.html in ./examples simulates CO2 concentration as a function of distance from a point.<br>
+
+With a real SCD41 sensor, one can map CO2 concentration in a room. CO2 in a room are dependent on ventilation, number of persons present, and other factors. Perhaps there will be a passthrough mode in VR in a browser to merge the real and virtual views to visualize CO2 3D data. For now, "Passthrough Shortcut" (Guardian setting) by double tapping the headset or "Stationary Boundary: Passthrough" experimental feature. The AR glasses from Oculus would be a great application like this. Hope the AR browser will be just as fantastic as the one on the Quest.<br>
 
 ## 2. Interfacing SCD41 to Raspberry Pi
 
