@@ -3,6 +3,8 @@ A project to explore measurement of carbon dioxide concentration and presenting 
 
 It is about learning to interface a Sensirion SCD4x carbon dioxide sensor to a Raspberry Pi and an Oculus Quest to 3D map CO2 measurements.<br>
 
+<img src="images/scd41.gif" width="360">
+
 ## System Requirements
 
 System Requirements
@@ -14,8 +16,6 @@ Oculus Browser >15.4 (Quest update 29.0 and threejs r129)<br>
 (Not sure if Oculus Browser needs to be configured for WebXR like in the early days. If the simulation below does not work, type "chrome://flags" in Oculus Browser and search for "webxr". "WebXR experiences with hand and joints tracking" and "WebXR Layers" are enabled)<br>
 
 ## 1. Simulate measuring CO2 level with Sensirion SCD41<br>
-
-
 
 ## 2. How to interface SCD41 to Raspberry Pi
 
