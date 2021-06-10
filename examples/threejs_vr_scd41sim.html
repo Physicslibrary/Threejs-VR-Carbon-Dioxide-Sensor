@@ -168,7 +168,7 @@ function render() {
 		co2 = 2000/Math.sqrt(Math.pow(object.position.x,2)+Math.pow((object.position.y+1),2)+Math.pow(object.position.z,2)+0.0001);
 		
 		scene.remove(co2_text);
-		co2_text = createText("CO2 "+Math.round(co2)+" ppm".toString(),0.05);
+		co2_text = createText("CO2 " + Math.round(co2).toString() + " ppm",0.05);
 		scene.add(co2_text);
 		delay=0;
 		
