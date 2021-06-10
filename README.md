@@ -58,3 +58,10 @@ https://www.sensirion.com/en/environmental-sensors/evaluation-kit-sek-environmen
 
 https://github.com/Sensirion/raspberry-pi-i2c-scd4x
 
+https://www.sensirion.com/en/environmental-sensors/indoor-air-quality/correct-ventilation-helps-to-reduce-the-risk-of-virus-transmission/
+
+https://montrealgazette.com/news/quebec/co2
+
+Adafruit Industries' Youtube on SCD4x:<br>
+
+https://www.youtube.com/watch?v=M_tFVNKgX04
