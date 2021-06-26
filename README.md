@@ -17,7 +17,7 @@ Oculus Browser >15.4 (Quest update 29.0)<br>
 
 Not sure if Oculus Browser needs to be configured for WebXR like in the early days. If the simulation below does not work, type "chrome://flags" in Oculus Browser and search for "webxr". "WebXR experiences with hand and joints tracking" and "WebXR Layers" are enabled.<br>
 
-Important - Javascript codes for this project are dependent on "WebXR Hand Input Module - Level 1", as of today, is an unstable API (https://www.w3.org/TR/webxr-hand-input-1/). Codes may stop working after Oculus Browser or threejs update. Oculus' experimental WebXR hand tracking release in February 2020 and three.js support have been fantastic with minimal disruption.<br>
+Important - Javascript codes for this project are dependent on "WebXR Hand Input Module - Level 1", as of today, is an unstable API (https://www.w3.org/TR/webxr-hand-input-1/). Codes may stop working after Oculus Browser or threejs update. Oculus' WebXR hand tracking (released February 2020) and three.js support have been fantastic.<br>
 
 ## 1. Simulate measuring CO2 level with Sensirion SCD41<br>
 
@@ -49,7 +49,7 @@ https://threejs.org/
 
 scd41.glb<br>
 photogrammetry created from 18 images using AliceVision Meshroom<br>
-by Hartwell Fong (CC BY 4.0)<br>
+(CC BY 4.0)<br>
 
 https://alicevision.org/
 
