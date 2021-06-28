@@ -3,7 +3,7 @@ A project to explore measurement of carbon dioxide concentration and presenting 
 
 It is about learning to interface a Sensirion SCD4x carbon dioxide sensor to a Raspberry Pi and an Oculus Quest to 3D map CO2 measurements.<br>
 
-<img src="images/scd41-2.jpg" width="360">
+<img src="images/scd41-2.jpg" width="512">
 
 <img src="images/scd41.gif" width="360">
 
