@@ -70,3 +70,5 @@ https://montrealgazette.com/news/quebec/co2
 Adafruit Industries' Youtube on SCD4x:<br>
 
 https://www.youtube.com/watch?v=M_tFVNKgX04
+
+<br>Copyright (c) 2021 Hartwell Fong
