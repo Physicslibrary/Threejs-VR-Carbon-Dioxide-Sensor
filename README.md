@@ -1,9 +1,9 @@
-# Threejs-VR-Carbon-Dioxide-Sensor (under construction)
+# Threejs-VR-Carbon-Dioxide-Sensor
 A project to explore measurement of carbon dioxide concentration and presenting the numbers in virtual reality.<br>
 
-It is about learning to interface a Sensirion SCD4x carbon dioxide sensor to a Raspberry Pi and an Oculus Quest to 3D map CO2 measurements.<br>
+Learn to interface a Sensirion SCD41 carbon dioxide sensor to a Raspberry Pi and an Oculus Quest to 3D map carbon dioxide levels.<br>
 
-<img src="images/scd41-2.jpg" width="512">
+<img src="images/scd41-3.jpg" width="400">
 
 <img src="images/scd41.gif" width="360">
 
