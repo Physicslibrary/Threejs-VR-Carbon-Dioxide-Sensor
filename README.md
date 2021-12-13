@@ -19,7 +19,7 @@ Oculus Browser >15.4 (Quest update 29.0)<br>
 
 Not sure if Oculus Browser needs to be configured for WebXR like in the early days. If the simulation below does not work, type "chrome://flags" in Oculus Browser and search for "webxr". "WebXR experiences with hand and joints tracking" and "WebXR Layers" are enabled.<br>
 
-Important - Javascript codes for this project are dependent on "WebXR Hand Input Module - Level 1", as of today, is an unstable API (https://www.w3.org/TR/webxr-hand-input-1/). Codes may stop working after Oculus Browser or threejs update. Oculus' WebXR hand tracking (released February 2020) and three.js support have been fantastic.<br>
+Codes for WebXR hand tracking may stop working after an Oculus Browser or threejs update.<br>
 
 ## 1. Simulate measuring CO2 level with Sensirion SCD41<br>
 
@@ -29,7 +29,7 @@ Open Oculus Browser to link ("Enter VR" using hand, no controller):<br>
 
 Code threejs_vr_scd41sim.html in ./examples simulates CO2 concentration as a function of distance from a point.<br>
 
-With a real SCD41 sensor, one can map CO2 concentration in a room. CO2 in a room are dependent on ventilation, number of persons, time, diffusion, and other factors. Perhaps there will be a passthrough mode in VR in a browser to merge real and virtual views to visualize CO2 3D data. For now, "Passthrough Shortcut" (Guardian setting) by double tapping the headset or "Stationary Boundary: Passthrough" experimental feature. The AR glasses from Oculus would be a great application for this. Hope the AR browser will be just as fantastic as the one on the Quest.<br>
+With a real SCD41 sensor, one can map CO2 concentration in a room. CO2 in a room are dependent on ventilation, number of persons, time, diffusion, and other factors. Perhaps there will be a passthrough mode in VR in a browser to merge real and virtual views to visualize CO2 3D data.<br>
 
 ## 2. Interfacing SCD41 to Raspberry Pi
 
